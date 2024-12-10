@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguimiento de Pagos de Préstamo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Seguimiento de Pagos de Préstamo</h1>
+        
+        <div>
+            <label for="initialAmount">Monto Inicial del Préstamo:</label>
+            <input type="number" id="initialAmount" placeholder="Ingrese monto inicial">
+            
+            <label for="paymentAmount">Monto del Abono:</label>
+            <input type="number" id="paymentAmount" placeholder="Ingrese monto a abonar">
+            
+            <button onclick="addPayment()">Registrar Pago</button>
+            
+            <div id="errorMessage"></div>
+        </div>
+
+        <table id="paymentTable">
+            <thead>
+                <tr>
+                    <th>Monto Abonado</th>
+                    <th>Saldo Restante</th>
+                    <th>Fecha</th>
+                </tr>
+            </thead>
+            <tbody id="paymentTableBody">
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
